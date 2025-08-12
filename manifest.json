@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Suno Kaizen",
+  "version": "0.9",
+  "description": "Sunoのコメント欄で、日本語入力中にEnterキーを押しても誤送信されるのを防ぎます。",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://suno.com/*",
+        "https://app.suno.ai/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
